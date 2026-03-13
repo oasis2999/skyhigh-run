@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Sky High Running Company</title>
+  <meta name="description" content="Trail running stories, race updates, and conservation news from Sky High Running Company.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Six+Caps&family=Source+Sans+Pro:wght@400;700&family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="site-logo">Sky<span>High</span></a>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="hero-bg">
+      <img src="images/test1-282-29-1.jpg" alt="Trail running blog" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Blog</h1>
+      <p>Stories from the Trail</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="date">March 2026</div>
+          <h3><a href="#">Arcadia 2026 Course Reveal</a></h3>
+          <p>We're excited to share the updated course for this year's Arcadia trail race. New singletrack sections, a stunning creek crossing, and a finish line you won't forget.</p>
+        </div>
+        <div class="blog-card">
+          <div class="date">February 2026</div>
+          <h3><a href="#">Trail Conservation Day Recap</a></h3>
+          <p>Last month, 40 volunteers joined us to clear and maintain 6 miles of trail in Eagle Creek Park. Here's what we accomplished and how you can join next time.</p>
+        </div>
+        <div class="blog-card">
+          <div class="date">January 2026</div>
+          <h3><a href="#">2026 Race Calendar Announced</a></h3>
+          <p>The wait is over. We're thrilled to announce our 2026 race calendar featuring both Glacier and Arcadia. Registration opens soon.</p>
+        </div>
+        <div class="blog-card">
+          <div class="date">November 2025</div>
+          <h3><a href="#">Glacier 2025 Race Recap</a></h3>
+          <p>Over 300 runners took on the Glacier course this fall. Rain, mud, and grit made it one of the most memorable races in Sky High history.</p>
+        </div>
+        <div class="blog-card">
+          <div class="date">September 2025</div>
+          <h3><a href="#">How to Prepare for Your First Trail Race</a></h3>
+          <p>New to trail running? Here are our top tips for training, gear, nutrition, and race-day strategy to help you cross the finish line with confidence.</p>
+        </div>
+        <div class="blog-card">
+          <div class="date">June 2022</div>
+          <h3><a href="#">Welcome to Sky High Running</a></h3>
+          <p>Our first post. We're building a trail running race company focused on sustainable running, conservation, and community in Indianapolis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-green">
+    <div class="container text-center">
+      <h2>Stay Connected</h2>
+      <p style="max-width:500px; margin:1rem auto 2rem; font-size:1.1rem;">Want race updates, trail stories, and volunteer opportunities delivered to your inbox?</p>
+      <a href="contact.html" class="btn">Contact Us</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">Sky<span>High</span></a>
+          <p>Trail running races rooted in sustainable running, conservation, and volunteerism. Based in Indianapolis, IN.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Races</h4>
+          <ul>
+            <li><a href="glacier.html">Glacier</a></li>
+            <li><a href="arcadia.html">Arcadia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sky High Running Company. All rights reserved. Indianapolis, IN.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

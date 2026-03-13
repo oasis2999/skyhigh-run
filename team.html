@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team | Sky High Running Company</title>
+  <meta name="description" content="Meet the team behind Sky High Running Company's trail races in Indianapolis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Six+Caps&family=Source+Sans+Pro:wght@400;700&family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="site-logo">Sky<span>High</span></a>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html" class="active">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="hero-bg">
+      <img src="images/test1-282-29.jpg" alt="Sky High Running team" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>The Team</h1>
+      <p>The People Behind the Races</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <h2>Meet the Crew</h2>
+        <div class="accent-line"></div>
+      </div>
+      <p class="text-center" style="max-width:650px; margin:0 auto 3rem; font-size:1.05rem;">
+        Sky High Running is built by a small, passionate team of trail runners, race directors, and outdoor enthusiasts based in Indianapolis. We run what we organize.
+      </p>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">PF</div>
+          <h3>PG Frazer</h3>
+          <div class="role">Founder &amp; Race Director</div>
+          <p>Ultrarunner, trail advocate, and the driving force behind Sky High. Passionate about building races that give back to the land and community.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">CD</div>
+          <h3>Course Director</h3>
+          <div class="role">Course Design &amp; Logistics</div>
+          <p>Responsible for scouting, marking, and measuring every mile of our race courses. Ensures every runner has a safe and memorable experience.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">VO</div>
+          <h3>Volunteer Coordinator</h3>
+          <div class="role">Community &amp; Volunteers</div>
+          <p>Manages our incredible volunteer network and coordinates trail conservation days throughout the year.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <div class="two-col">
+        <div class="two-col-text">
+          <h2>Join Our Team</h2>
+          <p>We're always looking for passionate people to help grow the Sky High community. Whether you want to volunteer at races, help with trail maintenance, or join the crew full-time, we want to hear from you.</p>
+          <p>Sky High is more than a race company &mdash; it's a community of people who believe running can make a difference.</p>
+          <a href="contact.html" class="btn mt-2">Get Involved</a>
+        </div>
+        <div>
+          <img src="images/test1-282-29-1.jpg" alt="Trail volunteers" style="width:100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">Sky<span>High</span></a>
+          <p>Trail running races rooted in sustainable running, conservation, and volunteerism. Based in Indianapolis, IN.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Races</h4>
+          <ul>
+            <li><a href="glacier.html">Glacier</a></li>
+            <li><a href="arcadia.html">Arcadia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sky High Running Company. All rights reserved. Indianapolis, IN.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

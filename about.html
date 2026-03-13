@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Sky High Running Company</title>
+  <meta name="description" content="Learn about Sky High Running Company's mission: sustainable running, conservation, and volunteerism in Indianapolis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Six+Caps&family=Source+Sans+Pro:wght@400;700&family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="site-logo">Sky<span>High</span></a>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="hero-bg">
+      <img src="images/test1-282-29-1.jpg" alt="Trail running landscape" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>About Us</h1>
+      <p>Our Story &amp; Mission</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="two-col">
+        <div class="two-col-text">
+          <h2>Who We Are</h2>
+          <p>Sky High Running Company is an Indianapolis-based trail running race company built on the belief that running should do more than test your limits &mdash; it should give back to the places we run and the people around us.</p>
+          <p>Founded by a group of passionate trail runners, we create race experiences that combine the thrill of endurance running with meaningful conservation and community impact.</p>
+          <a href="team.html" class="btn">Meet the Team</a>
+        </div>
+        <div>
+          <img src="images/test1-282-29.jpg" alt="Runners on trail" style="width:100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Philosophy</h2>
+        <div class="accent-line"></div>
+      </div>
+      <div class="values-grid">
+        <div class="value-item">
+          <div class="value-icon">&uarr;</div>
+          <h3>Explore</h3>
+          <p>We design courses that take runners through stunning, often overlooked natural landscapes. Every race is a chance to discover something new about the trail and yourself.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">&hearts;</div>
+          <h3>Giveback</h3>
+          <p>A portion of every registration goes to trail maintenance and local conservation nonprofits. We also organize volunteer trail days throughout the year.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">&star;</div>
+          <h3>Thrive</h3>
+          <p>Whether you're running your first 5K or your tenth ultra, our races are designed to help you grow as a runner and connect with a supportive community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="two-col reverse">
+        <div class="two-col-text">
+          <h2>Sustainable Running</h2>
+          <p>We're committed to leaving trails better than we found them. Our races use minimal single-use materials, partner with local conservation groups, and prioritize environmental stewardship at every level.</p>
+          <p>From compostable cups at aid stations to post-race trail cleanups, sustainability isn't an afterthought &mdash; it's built into everything we do.</p>
+        </div>
+        <div>
+          <img src="images/test1-282-29-1.jpg" alt="Natural trail scenery" style="width:100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-green">
+    <div class="container text-center">
+      <h2>Join the Movement</h2>
+      <p style="max-width:500px; margin:1rem auto 2rem; font-size:1.1rem;">Run with purpose. Explore new trails. Give back to your community.</p>
+      <a href="events.html" class="btn">View Our Races</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="site-logo">Sky<span>High</span></a>
+          <p>Trail running races rooted in sustainable running, conservation, and volunteerism. Based in Indianapolis, IN.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Races</h4>
+          <ul>
+            <li><a href="glacier.html">Glacier</a></li>
+            <li><a href="arcadia.html">Arcadia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sky High Running Company. All rights reserved. Indianapolis, IN.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
