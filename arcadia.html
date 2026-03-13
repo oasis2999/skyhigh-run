@@ -42,7 +42,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="reveal">
     <div class="container">
       <div class="two-col">
         <div class="two-col-text">
@@ -57,7 +57,7 @@
     </div>
   </section>
 
-  <section class="section-dark">
+  <section class="section-dark reveal">
     <div class="container">
       <div class="section-heading">
         <h2>Race Details</h2>
@@ -92,7 +92,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="reveal">
     <div class="container">
       <div class="two-col reverse">
         <div class="two-col-text">
@@ -108,7 +108,7 @@
     </div>
   </section>
 
-  <section class="section-green">
+  <section class="section-green reveal">
     <div class="container text-center">
       <h2>See All Races</h2>
       <p style="max-width:500px; margin:1rem auto 2rem; font-size:1.1rem;">Check out our full race calendar including the Glacier endurance race.</p>
@@ -157,6 +157,13 @@
     document.getElementById('hamburger').addEventListener('click', function() {
       document.getElementById('nav-links').classList.toggle('active');
     });
+    var revealEls = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el) { observer.observe(el); });
   </script>
 
 </body>
