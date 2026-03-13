@@ -427,6 +427,27 @@ section { padding: 5rem 0; }
 .about-banner-content h2 { color: var(--white); }
 .about-banner-content p { margin-bottom: 1.5rem; color: var(--off-white); line-height: 1.8; font-size: 1.05rem; }
 
+/* Scroll reveal — starts hidden, revealed by JS */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children inside philosophy section */
+.reveal .value-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible .value-item:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+.reveal.visible .value-item:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.25s; }
+.reveal.visible .value-item:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+
 /* --- Team --- */
 .team-grid {
   display: grid;

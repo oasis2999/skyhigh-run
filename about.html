@@ -42,7 +42,7 @@
     </div>
   </section>
 
-  <section class="about-banner">
+  <section class="about-banner reveal parallax-section">
     <div class="about-banner-bg">
       <img src="images/test1-282-29.jpg" alt="Runners on trail">
     </div>
@@ -55,7 +55,7 @@
     </div>
   </section>
 
-  <section class="section-dark">
+  <section class="section-dark reveal">
     <div class="container">
       <div class="section-heading">
         <h2>Our Philosophy</h2>
@@ -81,7 +81,7 @@
     </div>
   </section>
 
-  <section class="about-banner">
+  <section class="about-banner reveal parallax-section">
     <div class="about-banner-bg">
       <img src="images/test1-282-29-1.jpg" alt="Natural trail scenery">
     </div>
@@ -93,7 +93,7 @@
     </div>
   </section>
 
-  <section class="section-green">
+  <section class="section-green reveal">
     <div class="container text-center">
       <h2>Join the Movement</h2>
       <p style="max-width:500px; margin:1rem auto 2rem; font-size:1.1rem;">Run with purpose. Explore new trails. Give back to your community.</p>
@@ -139,9 +139,36 @@
   </footer>
 
   <script>
+    // Hamburger menu
     document.getElementById('hamburger').addEventListener('click', function() {
       document.getElementById('nav-links').classList.toggle('active');
     });
+
+    // Scroll reveal — fade in sections when they enter viewport
+    var revealEls = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el) { observer.observe(el); });
+
+    // Subtle parallax — background image moves slower than scroll
+    var parallaxSections = document.querySelectorAll('.parallax-section');
+    window.addEventListener('scroll', function() {
+      var scrollY = window.pageYOffset;
+      parallaxSections.forEach(function(section) {
+        var rect = section.getBoundingClientRect();
+        var sectionTop = rect.top + scrollY;
+        var offset = (scrollY - sectionTop) * 0.3;
+        var bg = section.querySelector('.about-banner-bg img');
+        if (bg && rect.bottom > 0 && rect.top < window.innerHeight) {
+          bg.style.transform = 'translateY(' + offset + 'px) scale(1.08)';
+        }
+      });
+    }, { passive: true });
   </script>
 
 </body>
