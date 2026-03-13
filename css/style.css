@@ -364,50 +364,68 @@ section { padding: 5rem 0; }
 .two-col-text h2 { color: var(--white); }
 .two-col-text p { margin-bottom: 1.5rem; color: var(--off-white); }
 
-/* --- About Split (Full-Bleed Photo Sections) --- */
-.about-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 500px;
+/* --- About Banner (Full-Width Image + Text Overlay) --- */
+.about-banner {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
   padding: 0;
 }
 
-.about-split-img {
-  position: relative;
-  overflow: hidden;
+.about-banner-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
-.about-split-img img {
+.about-banner-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.8s ease;
+  transition: transform 6s ease;
 }
 
-.about-split:hover .about-split-img img {
-  transform: scale(1.03);
+.about-banner:hover .about-banner-bg img {
+  transform: scale(1.04);
 }
 
-.about-split-text {
-  display: flex;
-  align-items: center;
-  background: var(--gray);
-  padding: 3rem;
+.about-banner-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(17, 17, 17, 0.88) 0%,
+    rgba(17, 17, 17, 0.65) 40%,
+    rgba(17, 17, 17, 0.15) 100%
+  );
 }
 
-.about-split-inner {
-  max-width: 480px;
+.about-banner-overlay--green {
+  background: linear-gradient(
+    to left,
+    rgba(45, 90, 58, 0.90) 0%,
+    rgba(45, 90, 58, 0.60) 40%,
+    rgba(17, 17, 17, 0.20) 100%
+  );
 }
 
-.about-split-inner h2 { color: var(--white); }
-.about-split-inner p { margin-bottom: 1.5rem; color: var(--off-white); line-height: 1.8; }
+.about-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 550px;
+  padding: 4rem 5%;
+}
 
-.about-split.reverse {
-  direction: rtl;
+.about-banner-content--right {
+  margin-left: auto;
+  text-align: right;
 }
-.about-split.reverse > * {
-  direction: ltr;
-}
+
+.about-banner-content h2 { color: var(--white); }
+.about-banner-content p { margin-bottom: 1.5rem; color: var(--off-white); line-height: 1.8; font-size: 1.05rem; }
 
 /* --- Team --- */
 .team-grid {
@@ -618,10 +636,13 @@ section { padding: 5rem 0; }
   .two-col.reverse { direction: ltr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .values-grid { grid-template-columns: 1fr; }
-  .about-split { grid-template-columns: 1fr; min-height: auto; }
-  .about-split.reverse { direction: ltr; }
-  .about-split-img { min-height: 300px; }
-  .about-split-text { padding: 3rem 1.5rem; }
+  .about-banner { min-height: 50vh; }
+  .about-banner-content,
+  .about-banner-content--right { margin-left: 0; text-align: left; max-width: 100%; padding: 3rem 5%; }
+  .about-banner-overlay,
+  .about-banner-overlay--green {
+    background: rgba(17, 17, 17, 0.75);
+  }
 }
 
 @media (max-width: 768px) {
